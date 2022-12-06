@@ -1,0 +1,78 @@
+<h2 class="h1 text-center">TD from hero</h2>
+
+<form (ngSubmit)="submit()" form="ngForm">
+    <div>
+        <!--  Nome -->
+        <div class="form-group mt-2">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+        </div>
+        <!--  Alter Ego -->
+        <div class="form-group mt-2">
+            <label for="ego">Alter Ego</label>
+            <input type="text" class="form-control" id="ego" required [(ngModel)]="model.alterEgo" name="ego">
+        </div>
+        <!-- Superpoteri -->
+        <div class="form-group mt-2">
+            <label for="power">Super Potere</label>
+            <select class="form-control" id="power" required>
+                <option *ngFor="let potere of poteri" [value]="potere">{{potere}}</option>
+            </select>
+        </div>
+        <!--  Nemico -->
+        <div class="form-group mt-2">
+            <label for="enemy">Nemico</label>
+            <input type="text" class="form-control" id="enemy" required [(ngModel)]="model.enemy" name="enemy">
+        </div>
+        <!--  Pianeta -->
+        <div class="form-group mt-2">
+            <label for="planet">Pianeta</label>
+            <input type="text" class="form-control" id="planet" required [(ngModel)]="model.planet" name="planet">
+        </div>
+        <!--  Weakness -->
+        <div class="form-group mt-2">
+            <label for="weakness">Debolezza</label>
+            <input type="text" class="form-control" id="weakness" required [(ngModel)]="model.weakness" name="weakness">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary w-100 mt-2">New Hero</button>
+</form>
+
+
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col">
+            <form>
+                <div>
+                    <div class="form-group mt-2">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="ego">Alter Ego</label>
+                        <input type="text" id="ego" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="power">Super Potere</label>
+                        <input type="text" id="power" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="enemy">Nemico</label>
+                        <input type="text" id="enemy" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="planet">Pianeta</label>
+                        <input type="text" id="planet" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="weakness">Debolezza</label>
+                        <input type="text" id="weakness" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mt-2">Invia</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
